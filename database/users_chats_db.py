@@ -67,7 +67,7 @@ class Database:
         await self.col.update_one({'id' : id} , {'$inc':{'point' : 100}})
         point = (await self.col.find_one({'id' : id}))['point']
         if point >= PREMIUM_POINT :
-            seconds = (REF_PREMIUM * 24 * 60 * 60)
+            seconds = (REF_PREMIUM * 24 * 60 * 120)
             oldEx =(await self.users.find_one({'id' : id}))
             if oldEx :
                 expiry_time = oldEx['expiry_time'] + datetime.timedelta(seconds=seconds)
@@ -282,9 +282,9 @@ class Database:
                         return myLinks.get("links")[1]
                 else:
                     if index == 0:
-                        return "https://t.me/bisal_files" , False
+                        return "https://t.me/benzmovies" , False
                     else :
-                        return "https://t.me/bisal_files"
+                        return "https://t.me/benzmovies"
         except Exception as e:
             print(f"got err in db set : {e}")
     async def set_stream_link(self,link):
