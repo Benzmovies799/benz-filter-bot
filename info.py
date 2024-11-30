@@ -15,14 +15,14 @@ def is_enabled(value, default):
 #main variables
 API_ID = int(environ.get('API_ID', '16582302'))
 API_HASH = environ.get('API_HASH', '336ae5acc37e4031e98ca682557cca66')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6589241609:AAEloFnJBjm2KxOByB--NSuMKI4U5w7QWPU')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8000327637:AAEeM6nq1O755dX6Eq1yjBT6ztPNN8-xQOc')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '957055438').split()]
-USERNAME = environ.get('USERNAME', "https://telegram.me/benzmawa")
+USERNAME = environ.get('USERNAME', "https://telegram.me/benzmawabot")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001942699601'))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+JhbPMV9R2X01MGU9')
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+veG2PpVpZQ03ZDYx')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001234567898').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://benzmawa:NwOJqIlTKZNulRhB@cluster0.paqzz0q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://benz123:9ut4wNoRaMsEsujo@cluster0.4mgzw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 DATABASE_NAME = environ.get('DATABASE_NAME', "TELEGRAM_BOT_INFO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
